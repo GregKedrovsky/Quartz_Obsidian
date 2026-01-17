@@ -1,6 +1,5 @@
 ---
 title: Home
-updated: 2026-01-17T11:12:00
 ---
 
 # English

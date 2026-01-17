@@ -3,7 +3,6 @@ title: The Learning Cycle
 tags:
 aliases:
   - The Learning Cycle
-updated: 2026-01-17T11:18:00
 ---
 # The Learning Cycle
 
