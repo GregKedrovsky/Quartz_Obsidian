@@ -8,16 +8,16 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Greg Kedrovsky",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "null",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    baseUrl: "greg.kedrovsky.net",
+    ignorePatterns: ["private", "templates", "Templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
@@ -29,14 +29,16 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: "#faf8f8",  // background
+          lightgray: "#e5e5e5", // borders and indent lines
+          gray: "#b8b8b8", // "Search" word in search box
+          darkgray: "#4e4e4e", // normal/paragraph text
+          // ORIGINAL dark: "#2b2b2b", // headings and link text
+          dark: "#2b2b2b", // headings and link text
+          // ORIGINAL secondary: "#284b63", // headings and link text
+          secondary: "#0D3157", // headings and link text
+          tertiary: "#84a59d", // headings and link text
+          highlight: "rgba(143, 159, 169, 0.15)", // link highlight
           textHighlight: "#fff23688",
         },
         darkMode: {
@@ -71,7 +73,7 @@ const config: QuartzConfig = {
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
-      Plugin.Latex({ renderEngine: "katex" }),
+      // Plugin.Latex({ renderEngine: "katex" }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

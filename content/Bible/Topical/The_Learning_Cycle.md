@@ -3,6 +3,9 @@ title: The Learning Cycle
 tags:
 aliases:
   - The Learning Cycle
+description: How we learn Scripture.
+draft: false
+date: 2026-01-17
 ---
 # The Learning Cycle
 

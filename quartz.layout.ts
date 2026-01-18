@@ -8,8 +8,11 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      //GitHub: "https://github.com/jackyzha0/quartz",
+      //"Discord Community": "https://discord.gg/cRFFHYye7t",
+      "YouTube, English": "https://www.youtube.com/@Theology-101",
+      "|":"#",
+      "YouTube, Español": "https://www.youtube.com/@teologia101",
     },
   }),
 }
@@ -21,9 +24,12 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
-    Component.TagList(),
+    // Component.ArticleTitle(),
+    // Component.ContentMeta(),
+    // Component.TagList(),
+  ],
+  afterBody: [
+      Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
@@ -38,7 +44,11 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+        title: "Sections",
+        folderClickBehavior: "collapse", // what happens when you click a folder
+        folderDefaultState: "collapsed", // default state of folders ("collapsed" or "open")
+    }),
   ],
   right: [
     Component.Graph(),
@@ -49,7 +59,11 @@ export const defaultContentPageLayout: PageLayout = {
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+      Component.Breadcrumbs(),
+      Component.ArticleTitle(),
+      Component.ContentMeta()
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
@@ -62,7 +76,11 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+        title: "Sections",
+        folderClickBehavior: "collapse", // what happens when you click a folder
+        folderDefaultState: "collapsed", // default state of folders ("collapsed" or "open")
+    }),
   ],
   right: [],
 }
